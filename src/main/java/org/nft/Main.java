@@ -40,6 +40,10 @@ public class Main {
         reader.writeLinkabilityNetwork(adjList,output);
         System.out.println("Linkability Network written to: " + output);
 
+
+
+        //test
+
         //print the count of links
         reader.printLinkWeightCount(linkabilityNetwork);
 
