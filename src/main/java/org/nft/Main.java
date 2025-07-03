@@ -3,12 +3,12 @@ package org.nft;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String file="transactions.csv";
+        String etnFile="prog3ETNsample.csv";
+        String baycFile="boredapeyachtclub.csv";
         String output="output.csv";
         List<String> cexFile= Arrays.asList(
                 "CEX/tornado.json",
@@ -30,26 +30,26 @@ public class Main {
 
         if(mode<1 || mode>3){
             System.out.println("Invalid mode. Please provide correct mode");
-            s.close();
+            s.close();      //closes the scanner
             return;
         }
 
         System.out.println("Enter the maximal depth of the traversal:");
         int maxDepth=s.nextInt();
-        s.close();
+        s.close();      //closes the scanner to free the resource
 
         long start=System.nanoTime();
 
         //cases for mode
         switch(mode){
             case 1:
-                ExecutionMode.Sequential(file,maxDepth,cexFile,output);
+                ExecutionMode.Sequential(etnFile,maxDepth,cexFile,baycFile,output);
                 break;
             case 2:
-                ExecutionMode.Parallel(file,maxDepth,cexFile,output);
+                //ExecutionMode.Parallel(file,maxDepth,cexFile,output);
                 break;
             case 3:
-                ExecutionMode.Distributed(file,maxDepth,cexFile,output);
+                //ExecutionMode.Distributed(file,maxDepth,cexFile,output);
                 break;
         }
 
