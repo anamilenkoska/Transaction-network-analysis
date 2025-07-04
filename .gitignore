@@ -13,6 +13,8 @@ target/
 *.ipr
 
 boredapeyachtclub.csv
+prog3ETNsample.csv
+prog3ETNsample.zip.001
 
 ### Eclipse ###
 .apt_generated
