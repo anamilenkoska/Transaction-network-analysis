@@ -6,7 +6,7 @@ import java.util.*;
 public class readFile {
     private final String filePath;
     private final int maxDepth;     //maximum traversal depth(d)
-    public final Set<String> cexAddr;
+    private final Set<String> cexAddr;
     public final Set<String> baycAddr;
 
     public readFile(String baycFile,String filePath,int maxDepth,List<String> cexFile) throws IOException {
@@ -50,7 +50,7 @@ public class readFile {
                 addresses.add(part.trim());
             }
         }
-        reader.close();
+        //reader.close();
         return addresses;
     }
 
@@ -88,7 +88,7 @@ public class readFile {
             if(cexAddr.contains(node)){
                 continue;   //skip CEX addresses
             }
-            linkabilityNetwork.put(node,new ArrayList<>());     //initializes empty list of edges for the current node
+            //linkabilityNetwork.put(node,new ArrayList<>());     //initializes empty list of edges for the current node
             //perform BFS to find the shortest paths up to the maxDepth
             Map<String,Integer> shortestPaths=BFS(adjList,node);
             for(Map.Entry<String,Integer> entry:shortestPaths.entrySet()){      //iterates over each node reachable from node

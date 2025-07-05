@@ -12,11 +12,6 @@ target/
 *.iml
 *.ipr
 
-boredapeyachtclub.csv
-prog3ETNsample.csv
-prog3ETNsample.zip.001
-.gitattributes
-output.csv
 
 ### Eclipse ###
 .apt_generated
