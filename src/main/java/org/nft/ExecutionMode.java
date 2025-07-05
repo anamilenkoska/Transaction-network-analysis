@@ -24,11 +24,11 @@ public class ExecutionMode {
         reader.printLinkWeightCount(linkabilityNetwork);
     }
 
-    public static void Parallel(String file,int maxDepth,List<String> cexFile, String output) throws IOException {
+    /*public static void Parallel(String file,int maxDepth,List<String> cexFile, String output) throws IOException {
         //Parallel.run(file,maxDepth,cexFile,output);
-    }
+    }*/
 
-    public static void Distributed(String file,int maxDepth,List<String> cexFile, String output){
+    /*public static void Distributed(String file,int maxDepth,List<String> cexFile, String output){
         System.out.println("Not implemented");
-    }
+    }*/
 }
