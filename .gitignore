@@ -12,7 +12,7 @@ target/
 *.iml
 *.ipr
 
-*.csv
+prog3ETNsample.csv.csv
 
 ### Eclipse ###
 .apt_generated
